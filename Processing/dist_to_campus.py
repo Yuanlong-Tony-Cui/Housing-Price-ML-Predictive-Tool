@@ -1,6 +1,7 @@
 import osmnx as ox
 from geopy.geocoders import Nominatim
 import matplotlib.pyplot as plt
+from tqdm import tqdm
 
 def dist_to_campus(addresses,plot):
     # Get the coordinates of University of Waterloo campus, using the museum as roughly the center of campus
@@ -23,7 +24,7 @@ def dist_to_campus(addresses,plot):
             close = False)
     # Calculate the road distance from each address to the campus
     distances = []
-    for address in addresses:
+    for address in tqdm(addresses):
         house_location = geolocator.geocode(address)
         if house_location is None:
             distances.append(None)
@@ -54,8 +55,9 @@ def dist_to_campus(addresses,plot):
                     show = False,
                     close = False)
     if plot:
-        min_lat, max_lat, min_lon, max_lon = ox.plot.get_graph_bounds(campus_graph)
-        ax0.set_ylim(min_lat, max_lat)
-        ax0.set_xlim(min_lon, max_lon)
+        plt.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
+        plt.margins(0,0)
+        plt.gca().xaxis.set_major_locator(plt.NullLocator())
+        plt.gca().yaxis.set_major_locator(plt.NullLocator())
         plt.show()
     return distances

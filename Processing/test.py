@@ -2,7 +2,6 @@ import osmnx as ox
 from geopy.geocoders import Nominatim
 import matplotlib.pyplot as plt
 
-
 geolocator = Nominatim(user_agent="my_app")
 campus_location = geolocator.geocode("Earth Sciences Museum, Waterloo, Ontario, Canada")
 campus_coords = (campus_location.latitude, campus_location.longitude)
@@ -28,5 +27,12 @@ route = ox.distance.shortest_path(
             )
 print(route)
 fig1,ax1=ox.plot.plot_graph_route(g,route,ax=ax0,route_color="blue",show=False,close=False)
+
+
+
+plt.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
+plt.margins(0,0)
+plt.gca().xaxis.set_major_locator(plt.NullLocator())
+plt.gca().yaxis.set_major_locator(plt.NullLocator())
 
 plt.show()
