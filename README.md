@@ -15,3 +15,7 @@ This should include all procedures of processing the data, such as labeling, cal
 3. Prediction
 
 This is the main prediction algorithm, and should provide results of evaluation metrics.
+
+4. Deliverables
+
+This will include any previous or future course deliverable submissions.
