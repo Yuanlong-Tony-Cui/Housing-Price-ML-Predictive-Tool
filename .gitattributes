@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Files to ignore on language statistics
+Acquisition\post.html linguist-vendored
