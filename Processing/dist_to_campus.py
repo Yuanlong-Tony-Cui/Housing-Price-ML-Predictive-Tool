@@ -10,7 +10,7 @@ def dist_to_campus(addresses,plot):
     campus_coords = (campus_location.latitude, campus_location.longitude)
     campus_graph = ox.graph_from_point(
         center_point = campus_coords,
-        dist = 5000,
+        dist = 6000,
         network_type = "walk",
         simplify = True)
     campus_id = ox.distance.nearest_nodes(
@@ -23,6 +23,7 @@ def dist_to_campus(addresses,plot):
             show = False,
             close = False)
     # Calculate the road distance from each address to the campus
+    print("Calculating distance to campus for each house")
     distances = []
     for address in tqdm(addresses):
         house_location = geolocator.geocode(address)
