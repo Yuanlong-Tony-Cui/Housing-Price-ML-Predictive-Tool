@@ -75,7 +75,7 @@ def dist_to_grocery(addresses,plot):
                     G = campus_graph,
                     route = shortest_route,
                     ax = ax0,
-                    route_color = "blue",
+                    route_color = "red",
                     show = False,
                     close = False)
     if plot:
