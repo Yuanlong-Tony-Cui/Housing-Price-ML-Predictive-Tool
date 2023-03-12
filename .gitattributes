@@ -2,4 +2,4 @@
 * text=auto
 
 # Files to ignore on language statistics
-Acquisition\post.html linguist-vendored
+Acquisition/page.html linguist-vendored
