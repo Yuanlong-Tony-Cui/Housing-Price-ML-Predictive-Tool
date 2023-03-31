@@ -1,5 +1,9 @@
 # Acquisition Module
 
+to be updated
+
+# Old stuff
+
 fb_group_scraper(url,scrolls,html_name)
 
 Scrape the fb group by scrolling down x times and expand all "See more" and store as .html
