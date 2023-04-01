@@ -6,11 +6,12 @@ from tqdm import tqdm
 def dist_to_campus(addresses,plot):
     # Get the coordinates of University of Waterloo campus, using the museum as roughly the center of campus
     geolocator = Nominatim(user_agent="my_app")
-    campus_location = geolocator.geocode("Earth Sciences Museum, Waterloo, Ontario, Canada")
+    # campus_location = geolocator.geocode("Earth Sciences Museum, Waterloo, Ontario, Canada")
+    campus_location = geolocator.geocode("University of Toronto, Toronto, Ontario, Canada")
     campus_coords = (campus_location.latitude, campus_location.longitude)
     campus_graph = ox.graph_from_point(
         center_point = campus_coords,
-        dist = 6000,
+        dist = 8000,
         network_type = "walk",
         simplify = True)
     campus_id = ox.distance.nearest_nodes(
