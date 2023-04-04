@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn import metrics
 
 """
 Note:
@@ -36,7 +37,7 @@ def new_section(arg_title):
 
 # Create a dataframe using a JSON file
 new_section("Input Loading")
-with open('Processing/sample_dataset.json') as f:
+with open('Processing/sample_dataset_new.json') as f:
     data = json.load(f)
 print("len(data):", len(data))
 print("data[0]:", data[0])
@@ -50,76 +51,78 @@ def preprocess_dataset(arg_data):
     while i_row < len(arg_data):
         original_features = list(arg_data[i_row].keys())
         for feature in original_features:
-            if arg_data[i_row][feature] == None:
-                arg_data[i_row][feature] = -1
-                if feature == "rent":
-                    arg_data[i_row][feature] = 0
+            # Convert boolean values to numeric values:
+            # * If we keep the booleans -> "TypeError: float() argument must be a string or a number"
+            # * If we convert booleans to strings -> "ValueError: could not convert string to float: None"
             if feature in ['furnished', 'utilities_included', "in_unit_laundry", "gym", "parking", "female_only"]:
                 if arg_data[i_row][feature] == True:
                     arg_data[i_row][feature] = 1
                 elif arg_data[i_row][feature] == False:
                     arg_data[i_row][feature] = 0
-                else: # TCUITODO: Handle `utilities_included` being a dictionary
+                elif arg_data[i_row][feature] == None:
                     arg_data[i_row][feature] = -1
+
+            # Expand the `distance_to_POI` field:
             if feature == "distance_to_POI":
                 for poi in arg_data[i_row][feature]:
-                    if poi != "bus_stop": # TCUITODO: Handle "bus_stop"
+                    if poi != "bus_stop": # Ignores "bus_stop"
                         new_key = feature + ":" + poi
                         arg_data[i_row][new_key] = arg_data[i_row][feature][poi]
-                        if arg_data[i_row][new_key] == None:
-                            arg_data[i_row][new_key] = -1
         i_row += 1
-    print("arg_data[2]:", arg_data[2])
+    # print("arg_data[2]:", arg_data[2])
     return arg_data
 
 # Create a dataframe and drop unwanted columns:
 df = pd.DataFrame(preprocess_dataset(data)).drop(columns=["address", "distance_to_POI"])
+# For selected columns, replace `None` values with the column average:
+for column in ["rent", "num_bedrooms", "num_bathrooms", "area", "distance_to_POI:campus", "distance_to_POI:grocery"]:
+    col_mean = round(df[column].mean())
+    df[column].fillna(col_mean, inplace=True)
+
 
 # Summary:
 new_section("Dataframe Overview")
-print(df.head(5))
-print(df.shape, df.ndim)
-print(df.info())
+print("df.head(5):", df.head(5))
+print("Shape & Dimension:", df.shape, df.ndim)
+print("Info:", df.info())
 
 # Price distribution:
 new_section("Visualization")
-# TCUITODO: Re-enable this
-# plt.hist(df['rent'], bins=20, edgecolor='black')
-# plt.xlabel('Price')
-# plt.ylabel('Count')
-# plt.title('Price Distribution')
-# plt.tight_layout()
-# plt.show()
+plt.hist(df['rent'], bins=20, edgecolor='black')
+plt.xlabel('Price')
+plt.ylabel('Count')
+plt.title('Price Distribution')
+plt.tight_layout()
+plt.show()
 
 # Overview: Show scatter plots of all features against the price
-# TCUITODO: Re-enable this:
-# fig = plt.figure(figsize=(20, 10))
-# i_plot = 1
-# for feature in df.columns:
-#     if feature in ['num_bedrooms', 'num_bathrooms', 'area'] or feature in ['furnished', 'utilities_included', "in_unit_laundry", "gym", "parking"]:
-#         axes = fig.add_subplot(3, 4, i_plot)
-#         plt.scatter(df[feature], df['rent'])
-#         axes.set_xlabel(feature)
-#         axes.set_ylabel("Price")
-#         axes.set_title("Price vs." + feature)
-#         i_plot += 1
-#     if "distance_to_POI:" in feature:
-#         axes = fig.add_subplot(3, 4, i_plot)
-#         plt.scatter(df[feature], df['rent'])
-#         axes.set_xlabel(feature)
-#         axes.set_ylabel("Price")
-#         axes.set_title("Price vs." + feature)
-#         i_plot += 1
-# plt.show()
+fig = plt.figure(figsize=(20, 10))
+i_plot = 1
+for feature in df.columns:
+    if feature in ['num_bedrooms', 'num_bathrooms', 'area'] or feature in ['furnished', 'utilities_included', "in_unit_laundry", "gym", "parking"]:
+        axes = fig.add_subplot(3, 4, i_plot)
+        plt.scatter(df[feature], df['rent'])
+        axes.set_xlabel(feature)
+        axes.set_ylabel("Price")
+        axes.set_title("Price vs." + feature)
+        i_plot += 1
+    if "distance_to_POI:" in feature:
+        axes = fig.add_subplot(3, 4, i_plot)
+        plt.scatter(df[feature], df['rent'])
+        axes.set_xlabel(feature)
+        axes.set_ylabel("Price")
+        axes.set_title("Price vs." + feature)
+        i_plot += 1
+plt.show()
 
 # Training dataset and testing dataset:
 new_section("Model Training")
 df_train, df_test, price_train, price_test = train_test_split(df, df['rent'], test_size=0.2)
-print(df_train.head(5))
-print(df_train.shape, df_train.ndim)
+print("df_train.head(5)", df_train.head(5))
+print("Shape & Dimension:", df_train.shape, df_train.ndim)
 
 # isnan() should always return false; isfinite() should always be true.
-print(np.any(np.isnan(df_train)), np.any(np.isfinite(df_train)), np.any(np.isnan(price_train)), np.any(np.isfinite(price_train)))
+# print(np.any(np.isnan(df_train)), np.any(np.isfinite(df_train)), np.any(np.isnan(price_train)), np.any(np.isfinite(price_train)))
 
 
 # Train the model:
@@ -127,7 +130,9 @@ lin_reg_obj = LinearRegression()
 lin_reg_obj.fit(df_train, price_train)
 correlations = pd.DataFrame(lin_reg_obj.coef_, df.columns, columns = ['Coeff'])
 print("Correlations:", correlations)
+
 # Test the model:
+new_section("Evaluating Model Accuracy")
 predictions = lin_reg_obj.predict(df_test)
 plt.scatter(price_test, predictions)
 plt.xlabel('Actual Price')
@@ -140,7 +145,12 @@ plt.ylabel("Count")
 plt.xlabel("Residual")
 plt.show()
 
-
+print(
+    "Mean absolute & squared error:",
+    metrics.mean_absolute_error(price_test, predictions),
+    metrics.mean_squared_error(price_test, predictions)
+)
+# np.sqrt(metrics.mean_squared_error(price_test, predictions))
 
 
 
