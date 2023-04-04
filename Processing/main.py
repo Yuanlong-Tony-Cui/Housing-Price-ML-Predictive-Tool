@@ -28,20 +28,28 @@ distances = dist_to_grocery(addresses,False)
 print(distances)
 """
 
+def new_section(arg_title):
+    print(" ")
+    print(" ")
+    print("- - - - - - - - - - " + arg_title + " - - - - - - - - - -")
+    print(" ")
+
 # Create a dataframe using a JSON file
+new_section("Input Loading")
 with open('Processing/sample_dataset.json') as f:
     data = json.load(f)
 print("len(data):", len(data))
 print("data[0]:", data[0])
 
 # Pre-process the data:
+new_section("Data Pre-processing")
 # 1. Unwrap embedded dictionaries
 # 2. Convert booleans to numeric values (for model training purposes)
 def preprocess_dataset(arg_data):
     i_row = 0
     while i_row < len(arg_data):
-        features = list(arg_data[i_row].keys())
-        for feature in features:
+        original_features = list(arg_data[i_row].keys())
+        for feature in original_features:
             if arg_data[i_row][feature] == None:
                 arg_data[i_row][feature] = -1
                 if feature == "rent":
@@ -58,6 +66,8 @@ def preprocess_dataset(arg_data):
                     if poi != "bus_stop": # TCUITODO: Handle "bus_stop"
                         new_key = feature + ":" + poi
                         arg_data[i_row][new_key] = arg_data[i_row][feature][poi]
+                        if arg_data[i_row][new_key] == None:
+                            arg_data[i_row][new_key] = -1
         i_row += 1
     print("arg_data[2]:", arg_data[2])
     return arg_data
@@ -66,56 +76,59 @@ def preprocess_dataset(arg_data):
 df = pd.DataFrame(preprocess_dataset(data)).drop(columns=["address", "distance_to_POI"])
 
 # Summary:
+new_section("Dataframe Overview")
 print(df.head(5))
 print(df.shape, df.ndim)
 print(df.info())
 
 # Price distribution:
-# prices = df['rent'][~np.isnan(df['rent'])] # filters out `nan` values
-plt.hist(df['rent'], bins=20, edgecolor='black')
-plt.xlabel('Price')
-plt.ylabel('Count')
-plt.title('Price Distribution')
-plt.tight_layout()
-# plt.show() # TCUITODO: Re-enable this
+new_section("Visualization")
+# TCUITODO: Re-enable this
+# plt.hist(df['rent'], bins=20, edgecolor='black')
+# plt.xlabel('Price')
+# plt.ylabel('Count')
+# plt.title('Price Distribution')
+# plt.tight_layout()
+# plt.show()
 
 # Overview: Show scatter plots of all features against the price
-fig = plt.figure(figsize=(20, 10))
-i_plot = 1
-for feature in df.columns:
-    if feature in ['num_bedrooms', 'num_bathrooms', 'area'] or feature in ['furnished', 'utilities_included', "in_unit_laundry", "gym", "parking"]:
-        axes = fig.add_subplot(3, 4, i_plot)
-        plt.scatter(df[feature], df['rent'])
-        axes.set_xlabel(feature)
-        axes.set_ylabel("Price")
-        axes.set_title("Price vs." + feature)
-        i_plot += 1
-    if "distance_to_POI:" in feature:
-        axes = fig.add_subplot(3, 4, i_plot)
-        plt.scatter(df[feature], df['rent'])
-        axes.set_xlabel(feature)
-        axes.set_ylabel("Price")
-        axes.set_title("Price vs." + feature)
-        i_plot += 1
-# plt.show() # TCUITODO: Re-enable this
+# TCUITODO: Re-enable this:
+# fig = plt.figure(figsize=(20, 10))
+# i_plot = 1
+# for feature in df.columns:
+#     if feature in ['num_bedrooms', 'num_bathrooms', 'area'] or feature in ['furnished', 'utilities_included', "in_unit_laundry", "gym", "parking"]:
+#         axes = fig.add_subplot(3, 4, i_plot)
+#         plt.scatter(df[feature], df['rent'])
+#         axes.set_xlabel(feature)
+#         axes.set_ylabel("Price")
+#         axes.set_title("Price vs." + feature)
+#         i_plot += 1
+#     if "distance_to_POI:" in feature:
+#         axes = fig.add_subplot(3, 4, i_plot)
+#         plt.scatter(df[feature], df['rent'])
+#         axes.set_xlabel(feature)
+#         axes.set_ylabel("Price")
+#         axes.set_title("Price vs." + feature)
+#         i_plot += 1
+# plt.show()
 
 # Training dataset and testing dataset:
+new_section("Model Training")
 df_train, df_test, price_train, price_test = train_test_split(df, df['rent'], test_size=0.2)
 print(df_train.head(5))
 print(df_train.shape, df_train.ndim)
-print(price_train)
-print(price_train.shape, price_train.ndim)
 
-# TCUITODO: Solve the error `ValueError: Input contains NaN, infinity or a value too large for dtype('float64').`
+# isnan() should always return false; isfinite() should always be true.
 print(np.any(np.isnan(df_train)), np.any(np.isfinite(df_train)), np.any(np.isnan(price_train)), np.any(np.isfinite(price_train)))
+
 
 # Train the model:
 lin_reg_obj = LinearRegression()
 lin_reg_obj.fit(df_train, price_train)
-correlations = pd.DataFrame(lreg.coef_, df.columns, columns = ['Coeff'])
-print(correlations)
+correlations = pd.DataFrame(lin_reg_obj.coef_, df.columns, columns = ['Coeff'])
+print("Correlations:", correlations)
 # Test the model:
-predictions = lin_reg_obj(df_test)
+predictions = lin_reg_obj.predict(df_test)
 plt.scatter(price_test, predictions)
 plt.xlabel('Actual Price')
 plt.ylabel('Predicted Price')
@@ -129,4 +142,5 @@ plt.show()
 
 
 
-# TCUITODO
+
+
