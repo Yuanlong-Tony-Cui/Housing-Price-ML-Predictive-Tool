@@ -1,4 +1,6 @@
 import re
+import json
+import os
 
 sample = {"address": "6 Airdrie Road, East York, ON", "rent": 2775.0, "num_bedrooms": 2, "num_bathrooms": 1, "furnished": False, "utilities_included": {
     "hydro": True, "wifi": True, "water": False, "heating": True}, "in_unit_laundry": True, "gym": False, "parking": True, "female_only": None, "area": None}
@@ -12,6 +14,7 @@ sample_list = [sample, sample2, sample3, sample4]
 
 
 def raw_to_cleaned(houses):
+    print(f"Cleaning {len(houses)} datapoints")
     # Remove all data that does not have all of the required keys:
     required_keys = ['address', 'rent', 'num_bedrooms', 'num_bathrooms', 'furnished',
                      'utilities_included', 'in_unit_laundry', 'gym', 'parking', 'female_only', 'area']
@@ -19,7 +22,8 @@ def raw_to_cleaned(houses):
 
     # Remove house that its address dosent start with 0-9
     regex = re.compile(r"^[^0-9]")
-    houses = [house for house in houses if not regex.match(house["address"])]
+    houses = [house for house in houses if house["address"]
+              is not None and not regex.match(house["address"])]
 
     # Remove house that does not have rent
     houses = [d for d in houses if isinstance(
@@ -57,6 +61,11 @@ def raw_to_cleaned(houses):
 
         if h['female_only'] != True:
             h['female_only'] = False
+
+    dir = os.path.dirname(os.path.abspath(__file__))
+    with open(os.path.join(dir, '../Processing/housing_data_cleaned.json'), 'w') as f:
+        f.write(json.dumps(houses, indent=4))
+    print(f"Finished cleaning data, left with {len(houses)} datapoints")
 
     return houses
 

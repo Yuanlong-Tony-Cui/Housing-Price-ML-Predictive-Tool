@@ -4,33 +4,52 @@ from address_extractor import address_extractor
 from kijiji_html_extractor import extract_kijiji_postings
 from OpenAIParser.openai_parser import parse_kijiji_posting
 from kijiji_html_extractor import extract_kijiji_postings
+from tqdm import tqdm
 import json
-
-ad_links = extract_kijiji_postings()
-print(len(ad_links))
-print(ad_links)
-
-housing_data = []
-for url in ad_links:
-    data = parse_kijiji_posting(url)
-    if data:
-        housing_data.append(data)
-
-with open('housing_data.json', 'w') as f:
-    f.write(json.dumps(housing_data))
+import asyncio
+import argparse
+import os
+import time
 
 
-# # Scrape the fb group by scrolling down x times and expand all "See more" and store as .html
-# url = "https://www.facebook.com/groups/110354088989367?locale=en_US"
-# html_name = "Acquisition/page.html"
-# fb_group_scraper(url, 5, html_name)
+async def main():
+    start_time = time.time()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--skip_urls", action="store_true",
+                        help="Skip extracting urls from Kijiji and use existing file")
+    args = parser.parse_args()
+    print(args)
+    if not args.skip_urls:
+        ad_links = extract_kijiji_postings()
+    else:
+        print("Skipping URL Extraction, reading from kijiji_links.txt")
 
-# # Parse through the html and read all posting messages and store in .json
-# json_name = "Acquisition/page.json"
-# fb_group_json(html_name, json_name)
+        dir = os.path.dirname(os.path.abspath(__file__))
 
-# # Extract addresses from the noisy texts in .json
-# addresses = address_extractor(json_name)
-# print(addresses)
+        with open(os.path.join(dir, 'kijiji_links.txt'), 'r') as f:
+            ad_links = [line.strip() for line in f.readlines()]
 
-# ad_postings = extract_kijiji_postings()
+    housing_data = []
+
+    print(f"Processing {len(ad_links)} URLS")
+    tasks = []
+    for url in ad_links:
+        task = asyncio.create_task(parse_kijiji_posting(url))
+        tasks.append(task)
+        await asyncio.sleep(3)
+
+    results = await asyncio.gather(*tasks)
+    for result in results:
+        if result:
+            housing_data.append(result)
+
+    with open('housing_data.json', 'w') as f:
+        f.write(json.dumps(housing_data, indent=4))
+
+    end_time = time.time()
+
+    print(
+        f"Runtime: {end_time - start_time:.2f} seconds. Found {len(housing_data)} addresses")
+
+
+asyncio.run(main())

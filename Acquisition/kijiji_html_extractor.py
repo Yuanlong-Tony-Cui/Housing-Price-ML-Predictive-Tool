@@ -3,25 +3,24 @@ import requests
 import time
 import pandas as pd
 from bs4 import BeautifulSoup
+from tqdm import tqdm
 
 
 def extract_kijiji_postings():
     # Declaring page number and total pages
     page_number = 1
-    total_pages = 3
+    total_pages = 58
     ad_links = []
+    # base URL for the Kijiji website
+    base_url = "https://www.kijiji.ca"
 
-    for i in range(total_pages):
-
-        # base URL for the Kijiji website
-        base_url = "https://www.kijiji.ca"
-
+    print("Extracting Kijiji Links")
+    for i in tqdm(range(total_pages)):
         # URL for the first page
-        page_1_url = base_url + '/b-for-rent/city-of-toronto/rental/page-2/k0c30349001l1700273?radius=18.0&address=Toronto%2C+ON&ll=43.653226,-79.383184'
+        page_1_url = base_url + '/b-for-rent/city-of-toronto/rental/k0c30349001l1700273?ll=43.662892%2C-79.395656&address=University+of+Toronto%2C+King%26%2327%3Bs+College+Circle%2C+Toronto%2C+ON&radius=9.0'
         previous_page = 'page-' + str(page_number - 1)
         current_page = 'page-' + str(page_number)
         page_1_url.replace(previous_page, current_page)
-        print(page_1_url)
         # use requests library to get respo
         response = requests.get(page_1_url)
 
@@ -44,12 +43,14 @@ def extract_kijiji_postings():
             # add the link to the list
             for l in link:
                 ad_links.append(base_url + l["href"])
-        print(len(ad_links))
-        print(ad_links)
-        page_number = page_number + 1
+        page_number += 1
 
     with open('kijiji_links.txt', 'w') as f:
         for item in ad_links:
             f.write("%s\n" % item)
 
+    print(f"Found {len(ad_links)} urls from Kijiji")
     return ad_links
+
+
+# extract_kijiji_postings()
