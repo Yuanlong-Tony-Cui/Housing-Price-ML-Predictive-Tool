@@ -3,6 +3,7 @@ from geopy.geocoders import Nominatim
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 import json
+import time
 
 def dist_to_POI(addresses,plot,option):
     # Get the coordinates of University of Waterloo campus, using the museum as roughly the center of campus
@@ -31,6 +32,7 @@ def dist_to_POI(addresses,plot,option):
     POIs = input_data['addresses']
     POI_ids = []
     for POI in tqdm(POIs):
+        time.sleep(1)
         POI_location = geolocator.geocode(POI)
         if POI_location is not None:
             POI_coords = (POI_location.latitude, POI_location.longitude)
@@ -50,6 +52,7 @@ def dist_to_POI(addresses,plot,option):
     print("Calculating distance to closest POI for each house")
     distances = []
     for address in tqdm(addresses):
+        time.sleep(1)
         house_location = geolocator.geocode(address)
         if house_location is None:
             distances.append(None)

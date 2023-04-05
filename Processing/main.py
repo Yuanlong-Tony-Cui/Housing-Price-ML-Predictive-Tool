@@ -10,13 +10,16 @@ with open(os.path.join(dir, '../Acquisition/housing_data.json'), 'r') as f:
     houses_raw = json.load(f)
 
 # clean the data
-houses_cleaned = raw_to_cleaned(houses_raw)
+# houses_cleaned = raw_to_cleaned(houses_raw)
+# alternatively load already cleaned data
+with open(os.path.join(dir, '../Processing/housing_data_cleaned.json'), 'r') as f:
+    houses_cleaned = json.load(f)
 
 # Extract the addresses from the input data (same order)
 addresses = [house['address'] for house in houses_cleaned]
 
 # Call functions with the addresses as input
-campus_distances = dist_to_campus(addresses, False)
+campus_distances = dist_to_campus(addresses, True)
 grocery_distances = dist_to_POI(addresses, False, "grocery")
 # bus_stop_distances = dist_to_POI(addresses,False,"bus")
 

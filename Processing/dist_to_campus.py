@@ -2,6 +2,7 @@ import osmnx as ox
 from geopy.geocoders import Nominatim
 import matplotlib.pyplot as plt
 from tqdm import tqdm
+import time
 
 def dist_to_campus(addresses,plot):
     # Get the coordinates of University of Waterloo campus, using the museum as roughly the center of campus
@@ -27,6 +28,7 @@ def dist_to_campus(addresses,plot):
     print("Calculating distance to campus for each house")
     distances = []
     for address in tqdm(addresses):
+        time.sleep(1)
         house_location = geolocator.geocode(address)
         if house_location is None:
             distances.append(None)
