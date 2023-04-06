@@ -5,11 +5,14 @@ from tqdm import tqdm
 import json
 import time
 
+WAIT_SEC = 1.5
+TIMEOUT = 5
+
 def dist_to_POI(addresses,plot,option):
-    # Get the coordinates of University of Waterloo campus, using the museum as roughly the center of campus
+    # Get the coordinates of university campus
     geolocator = Nominatim(user_agent="my_app")
-    # campus_location = geolocator.geocode("Earth Sciences Museum, Waterloo, Ontario, Canada")
-    campus_location = geolocator.geocode("University of Toronto, Toronto, Ontario, Canada")
+    # campus_location = geolocator.geocode("Earth Sciences Museum, Waterloo, Ontario, Canada", timeout=TIMEOUT)
+    campus_location = geolocator.geocode("University of Toronto, Toronto, Ontario, Canada", timeout=TIMEOUT)
     campus_coords = (campus_location.latitude, campus_location.longitude)
     campus_graph = ox.graph_from_point(
         center_point = campus_coords,
@@ -32,8 +35,8 @@ def dist_to_POI(addresses,plot,option):
     POIs = input_data['addresses']
     POI_ids = []
     for POI in tqdm(POIs):
-        time.sleep(1)
-        POI_location = geolocator.geocode(POI)
+        time.sleep(WAIT_SEC)
+        POI_location = geolocator.geocode(POI, timeout=TIMEOUT)
         if POI_location is not None:
             POI_coords = (POI_location.latitude, POI_location.longitude)
             POI_id = ox.distance.nearest_nodes(
@@ -52,8 +55,8 @@ def dist_to_POI(addresses,plot,option):
     print("Calculating distance to closest POI for each house")
     distances = []
     for address in tqdm(addresses):
-        time.sleep(1)
-        house_location = geolocator.geocode(address)
+        time.sleep(WAIT_SEC)
+        house_location = geolocator.geocode(address, timeout=TIMEOUT)
         if house_location is None:
             distances.append(None)
         else:

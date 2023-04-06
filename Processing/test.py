@@ -3,7 +3,7 @@ from geopy.geocoders import Nominatim
 import matplotlib.pyplot as plt
 
 geolocator = Nominatim(user_agent="my_app")
-campus_location = geolocator.geocode("Earth Sciences Museum, Waterloo, Ontario, Canada")
+campus_location = geolocator.geocode("Earth Sciences Museum, Waterloo, Ontario, Canada", timeout=5)
 campus_coords = (campus_location.latitude, campus_location.longitude)
 g = ox.graph_from_point(campus_coords, dist=1000, network_type="walk", simplify=True)
 print(campus_coords)
