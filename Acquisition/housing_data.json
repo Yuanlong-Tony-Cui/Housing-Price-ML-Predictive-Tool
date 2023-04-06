@@ -18714,7 +18714,7 @@
         "gym": false,
         "parking": true,
         "female_only": false,
-        "area": NaN
+        "area": null
     },
     {
         "address": "Empty JSON",
