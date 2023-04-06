@@ -37,7 +37,7 @@ def new_section(arg_title):
 
 # Create a dataframe using a JSON file
 new_section("Input Loading")
-with open('Processing/sample_dataset_new.json') as f:
+with open('Processing/housing_data_processed.json') as f:
     data = json.load(f)
 print("len(data):", len(data))
 print("data[0]:", data[0])
@@ -74,14 +74,18 @@ def preprocess_dataset(arg_data):
 
 # Create a dataframe and drop unwanted columns:
 df = pd.DataFrame(preprocess_dataset(data)).drop(columns=["address", "distance_to_POI"])
+
+# Summary:
+new_section("Dataframe Overview")
+print("df.head(5):", df.head(5))
+print("Shape & Dimension:", df.shape, df.ndim)
+print("Info:", df.info())
+
 # For selected columns, replace `None` values with the column average:
 for column in ["rent", "num_bedrooms", "num_bathrooms", "area", "distance_to_POI:campus", "distance_to_POI:grocery"]:
     col_mean = round(df[column].mean())
     df[column].fillna(col_mean, inplace=True)
 
-
-# Summary:
-new_section("Dataframe Overview")
 print("df.head(5):", df.head(5))
 print("Shape & Dimension:", df.shape, df.ndim)
 print("Info:", df.info())
