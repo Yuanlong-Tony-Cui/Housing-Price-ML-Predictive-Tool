@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression, Ridge, Lasso
 from sklearn import metrics
 
 """
@@ -128,33 +128,49 @@ print("Shape & Dimension:", df_train.shape, df_train.ndim)
 # isnan() should always return false; isfinite() should always be true.
 # print(np.any(np.isnan(df_train)), np.any(np.isfinite(df_train)), np.any(np.isnan(price_train)), np.any(np.isfinite(price_train)))
 
+def get_lin_reg_model(arg_model_type, arg_alpha=None):
+    lin_reg_obj = None
+    if arg_model_type == "Standard":
+        lin_reg_obj = LinearRegression()
+    elif arg_model_type == "Lasso":
+        if arg_alpha == None:
+            raise Exception("Lasso(): Please specify the Alpha value!")
+        lin_reg_obj = Lasso(arg_alpha)
+    elif arg_model_type == "Ridge":
+        if arg_alpha == None:
+            raise Exception("Ridge(): Please specify the Alpha value!")
+        lin_reg_obj = Ridge(arg_alpha)
+    return lin_reg_obj
 
-# Train the model:
-lin_reg_obj = LinearRegression()
-lin_reg_obj.fit(df_train, price_train)
-correlations = pd.DataFrame(lin_reg_obj.coef_, df.columns, columns = ['Coeff'])
-print("Correlations:", correlations)
+# Train the model using different alpha values:
+for alpha_ridge in [0.001, 0.01, 0.1, 1, 10, 100, 1000]:
+    lin_reg_obj = get_lin_reg_model("Ridge", alpha_ridge)
+    lin_reg_obj.fit(df_train, price_train)
+    correlations = pd.DataFrame(lin_reg_obj.coef_, df.columns, columns = ['Coeff'])
+    print("Correlations:", correlations)
 
-# Test the model:
-new_section("Evaluating Model Accuracy")
-predictions = lin_reg_obj.predict(df_test)
-plt.scatter(price_test, predictions)
-plt.xlabel('Actual Price')
-plt.ylabel('Predicted Price')
-plt.plot(np.linspace(0,5,100), np.linspace(0,5,100), '-r')
-plt.show()
-# Visualize the residuals:
-plt.hist(price_test - predictions, edgecolor='black')
-plt.ylabel("Count")
-plt.xlabel("Residual")
-plt.show()
+    # Test the model:
+    new_section("Evaluating Model Accuracy")
+    predictions = lin_reg_obj.predict(df_test)
+    plt.scatter(price_test, predictions)
+    plt.xlabel('Actual Price')
+    plt.ylabel('Predicted Price')
+    plt.plot(np.linspace(0,5,100), np.linspace(0,5,100), '-r')
+    # plt.show()
+    plt.savefig('actual_vs_predicted-alpha=' + str(alpha_ridge) + '.png')
+    # Visualize the residuals:
+    plt.hist(price_test - predictions, edgecolor='black')
+    plt.ylabel("Count")
+    plt.xlabel("Residual")
+    # plt.show()
+    plt.savefig('residuals-alpha=' + str(alpha_ridge) + '.png')
 
-print(
-    "Mean absolute & squared error:",
-    metrics.mean_absolute_error(price_test, predictions),
-    metrics.mean_squared_error(price_test, predictions)
-)
-# np.sqrt(metrics.mean_squared_error(price_test, predictions))
+    print(
+        "Mean absolute & squared error:",
+        metrics.mean_absolute_error(price_test, predictions),
+        metrics.mean_squared_error(price_test, predictions)
+    )
+    # np.sqrt(metrics.mean_squared_error(price_test, predictions))
 
 
 
