@@ -2,4 +2,5 @@
 * text=auto
 
 # Files to ignore on language statistics
-Acquisition/page.html linguist-vendored
+*.html linguist-vendored
+*.ipynb linguist-vendored
