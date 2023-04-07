@@ -60,7 +60,7 @@ def preprocess_dataset(arg_data):
                 elif arg_data[i_row][feature] == False:
                     arg_data[i_row][feature] = 0
                 elif arg_data[i_row][feature] == None:
-                    arg_data[i_row][feature] = -1
+                    arg_data[i_row][feature] = 0
 
             # Expand the `distance_to_POI` field:
             if feature == "distance_to_POI":
@@ -83,6 +83,9 @@ print("Info:", df.info())
 
 # For selected columns, replace `None` values with the column average:
 for column in ["rent", "num_bedrooms", "num_bathrooms", "area", "distance_to_POI:campus", "distance_to_POI:grocery"]:
+    # Handle `area: 0` and `area: None`:
+    if column == "area":
+        df.loc[df[column] < 1, column] = None
     col_mean = round(df[column].mean())
     df[column].fillna(col_mean, inplace=True)
 
@@ -103,14 +106,11 @@ plt.show()
 fig = plt.figure(figsize=(20, 10))
 i_plot = 1
 for feature in df.columns:
-    if feature in ['num_bedrooms', 'num_bathrooms', 'area'] or feature in ['furnished', 'utilities_included', "in_unit_laundry", "gym", "parking"]:
-        axes = fig.add_subplot(3, 4, i_plot)
-        plt.scatter(df[feature], df['rent'])
-        axes.set_xlabel(feature)
-        axes.set_ylabel("Price")
-        axes.set_title("Price vs." + feature)
-        i_plot += 1
-    if "distance_to_POI:" in feature:
+    if (
+        feature in ['num_bedrooms', 'num_bathrooms', 'area']
+        or feature in ['furnished', 'utilities_included', "in_unit_laundry", "gym", "parking"]
+        or "distance_to_POI:" in feature
+    ):
         axes = fig.add_subplot(3, 4, i_plot)
         plt.scatter(df[feature], df['rent'])
         axes.set_xlabel(feature)
@@ -121,7 +121,8 @@ plt.show()
 
 # Training dataset and testing dataset:
 new_section("Model Training")
-df_train, df_test, price_train, price_test = train_test_split(df, df['rent'], test_size=0.2)
+df_rent_dropped = df.drop("rent", axis=1)
+df_train, df_test, price_train, price_test = train_test_split(df_rent_dropped, df["rent"], test_size=0.4)
 print("df_train.head(5)", df_train.head(5))
 print("Shape & Dimension:", df_train.shape, df_train.ndim)
 
@@ -143,29 +144,35 @@ def get_lin_reg_model(arg_model_type, arg_alpha=None):
     return lin_reg_obj
 
 # Train the model using different alpha values:
-for alpha_ridge in [0.001, 0.01, 0.1, 1, 10, 100, 1000]:
+for alpha_ridge in [0, 0.1, 1, 3, 10, 20, 50, 100, 1000]:
     lin_reg_obj = get_lin_reg_model("Ridge", alpha_ridge)
     lin_reg_obj.fit(df_train, price_train)
-    correlations = pd.DataFrame(lin_reg_obj.coef_, df.columns, columns = ['Coeff'])
+    correlations = pd.DataFrame(lin_reg_obj.coef_, df_rent_dropped.columns, columns = ['Coeff'])
     print("Correlations:", correlations)
 
     # Test the model:
     new_section("Evaluating Model Accuracy")
     predictions = lin_reg_obj.predict(df_test)
+    plt.clf() # Clears the figrue
     plt.scatter(price_test, predictions)
     plt.xlabel('Actual Price')
     plt.ylabel('Predicted Price')
     plt.plot(np.linspace(0,5,100), np.linspace(0,5,100), '-r')
     # plt.show()
     plt.savefig('actual_vs_predicted-alpha=' + str(alpha_ridge) + '.png')
+
     # Visualize the residuals:
+    plt.clf() # Clears the figrue
     plt.hist(price_test - predictions, edgecolor='black')
     plt.ylabel("Count")
     plt.xlabel("Residual")
     # plt.show()
     plt.savefig('residuals-alpha=' + str(alpha_ridge) + '.png')
 
+    # TCUITODO: Issue: The saved "residual plots" are actually scattered plots.
+
     print(
+        "Alpha: " + str(alpha_ridge),
         "Mean absolute & squared error:",
         metrics.mean_absolute_error(price_test, predictions),
         metrics.mean_squared_error(price_test, predictions)
