@@ -2,15 +2,20 @@ import osmnx as ox
 from geopy.geocoders import Nominatim
 import matplotlib.pyplot as plt
 from tqdm import tqdm
+import time
+
+WAIT_SEC = 1.5
+TIMEOUT = 5
 
 def dist_to_campus(addresses,plot):
-    # Get the coordinates of University of Waterloo campus, using the museum as roughly the center of campus
+    # Get the coordinates of university campus
     geolocator = Nominatim(user_agent="my_app")
-    campus_location = geolocator.geocode("Earth Sciences Museum, Waterloo, Ontario, Canada")
+    # campus_location = geolocator.geocode("Earth Sciences Museum, Waterloo, Ontario, Canada")
+    campus_location = geolocator.geocode("University of Toronto, Toronto, Ontario, Canada", timeout=TIMEOUT)
     campus_coords = (campus_location.latitude, campus_location.longitude)
     campus_graph = ox.graph_from_point(
         center_point = campus_coords,
-        dist = 6000,
+        dist = 8000,
         network_type = "walk",
         simplify = True)
     campus_id = ox.distance.nearest_nodes(
@@ -26,7 +31,8 @@ def dist_to_campus(addresses,plot):
     print("Calculating distance to campus for each house")
     distances = []
     for address in tqdm(addresses):
-        house_location = geolocator.geocode(address)
+        time.sleep(WAIT_SEC)
+        house_location = geolocator.geocode(address, timeout=TIMEOUT)
         if house_location is None:
             distances.append(None)
         else:
