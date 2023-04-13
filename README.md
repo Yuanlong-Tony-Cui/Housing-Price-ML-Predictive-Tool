@@ -1,5 +1,5 @@
 # Waterloo Housing Price Predictor
- 
+
 The overall goal of the machine learning tool is to provide students with reliable insight regarding housing prices in the Waterloo region based on various factors.
 
 There will be 3 main modules:

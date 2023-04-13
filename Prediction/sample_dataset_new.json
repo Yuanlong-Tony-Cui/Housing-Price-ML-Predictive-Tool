@@ -1,0 +1,1786 @@
+[
+  {
+    "address": "28 Maynard Avenue, Toronto, ON",
+    "rent": 1610.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 329,
+    "distance_to_POI": { "campus": 5.7, "grocery": 0.22, "bus_stop": "pending" }
+  },
+  {
+    "address": "185 Roehampton Avenue, Toronto, ON",
+    "rent": 3250.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 2,
+    "furnished": true,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 842,
+    "distance_to_POI": {
+      "campus": 6.15,
+      "grocery": 4.44,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "6 Airdrie Road, East York, ON",
+    "rent": 2775.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": null,
+    "distance_to_POI": {
+      "campus": 6.36,
+      "grocery": 4.16,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 2500.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 598,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 2615.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 688,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 3193.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 2,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 900,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 2850.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 795,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 3220.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 2,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 887,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "20 John St, Toronto, ON",
+    "rent": 3500.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": true,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": null,
+    "distance_to_POI": {
+      "campus": 2.45,
+      "grocery": 0.27,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "20 John St, Toronto, ON",
+    "rent": 3800.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": true,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": null,
+    "distance_to_POI": {
+      "campus": 2.45,
+      "grocery": 0.27,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "515 Rosewell Avenue, Toronto, ON, M4R 2J3",
+    "rent": 2495.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 777,
+    "distance_to_POI": {
+      "campus": null,
+      "grocery": null,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "1101 Bay Street, Toronto, ON",
+    "rent": 2495.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 535,
+    "distance_to_POI": { "campus": 1.0, "grocery": 0.11, "bus_stop": "pending" }
+  },
+  {
+    "address": "515 Rosewell Avenue, Toronto, ON",
+    "rent": 3295.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 841,
+    "distance_to_POI": {
+      "campus": 7.57,
+      "grocery": 5.85,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "455 Front Street East, Toronto, ON",
+    "rent": 2400.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 564,
+    "distance_to_POI": { "campus": 4.6, "grocery": 0.84, "bus_stop": "pending" }
+  },
+  {
+    "address": "10 Muirhead Road, North York, ON",
+    "rent": 2495.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 900,
+    "distance_to_POI": {
+      "campus": 11.79,
+      "grocery": 7.72,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "619 Woodbine Avenue, Toronto, ON, M4E 2J2",
+    "rent": 2179.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 592,
+    "distance_to_POI": {
+      "campus": null,
+      "grocery": null,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "99 Gerrard Street West, Toronto, ON",
+    "rent": 2680.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 570,
+    "distance_to_POI": {
+      "campus": 1.42,
+      "grocery": 0.32,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2 St. Thomas Street, Toronto, ON",
+    "rent": 5020.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 2,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 915,
+    "distance_to_POI": {
+      "campus": 0.91,
+      "grocery": 0.26,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "99 Tyndall Avenue, Toronto, ON",
+    "rent": 2150.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 539,
+    "distance_to_POI": { "campus": 5.31, "grocery": 1.0, "bus_stop": "pending" }
+  },
+  {
+    "address": "115 Tyndall Avenue, Toronto, ON",
+    "rent": 1579.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 429,
+    "distance_to_POI": {
+      "campus": 5.15,
+      "grocery": 0.99,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "25 Eccleston Drive, Toronto, ON",
+    "rent": 2850.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 914,
+    "distance_to_POI": {
+      "campus": 11.82,
+      "grocery": 7.45,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "4 Overland Drive, Toronto, ON",
+    "rent": 2125.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 629,
+    "distance_to_POI": {
+      "campus": 11.79,
+      "grocery": 7.73,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2050 Keele Street, North York, ON",
+    "rent": 3096.0,
+    "num_bedrooms": 3,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 918,
+    "distance_to_POI": {
+      "campus": 9.33,
+      "grocery": 4.39,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "798 Richmond Street West, Toronto, ON",
+    "rent": 1750.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 236,
+    "distance_to_POI": {
+      "campus": 3.15,
+      "grocery": 0.73,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "25 Ordnance Street, Toronto, ON",
+    "rent": 2700.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 535,
+    "distance_to_POI": {
+      "campus": 4.02,
+      "grocery": 1.54,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "730 St Clarens Avenue, Toronto, ON",
+    "rent": 1475.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 230,
+    "distance_to_POI": {
+      "campus": 4.94,
+      "grocery": 2.07,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "3410 Havenwood Drive, Mississauga, ON",
+    "rent": 1900.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 500,
+    "distance_to_POI": {
+      "campus": 11.05,
+      "grocery": 5.29,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2 Abbott Avenue, Toronto, ON, M6P 1H4",
+    "rent": 1800.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": true,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 650,
+    "distance_to_POI": {
+      "campus": null,
+      "grocery": null,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "921 Wilson Avenue, Toronto, ON",
+    "rent": 1850.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 600,
+    "distance_to_POI": {
+      "campus": 11.35,
+      "grocery": 8.8,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2 Vena Way, Toronto, ON",
+    "rent": 2100.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 545,
+    "distance_to_POI": {
+      "campus": null,
+      "grocery": null,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2900 Jane Street, Toronto, ON",
+    "rent": 1750.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 555,
+    "distance_to_POI": {
+      "campus": 14.13,
+      "grocery": 9.38,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "933 Wilson Avenue, Toronto, ON",
+    "rent": 2100.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 800,
+    "distance_to_POI": {
+      "campus": 11.55,
+      "grocery": 8.6,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "28 Bonny Lynn Ct, Scarborough, ON",
+    "rent": 1950.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 900,
+    "distance_to_POI": {
+      "campus": 13.36,
+      "grocery": 8.18,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "402 The East Mall, Etobicoke, ON",
+    "rent": 2400.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 600,
+    "distance_to_POI": { "campus": 9.5, "grocery": 2.82, "bus_stop": "pending" }
+  },
+  {
+    "address": "11 Lillian Street, Toronto, ON",
+    "rent": 2495.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 2,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 600,
+    "distance_to_POI": {
+      "campus": 5.69,
+      "grocery": 3.98,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "437 Glen Park Ave, Toronto, ON",
+    "rent": 1750.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": null,
+    "distance_to_POI": { "campus": 8.1, "grocery": 5.63, "bus_stop": "pending" }
+  },
+  {
+    "address": "265 Dixon Road, Toronto, ON, M9R 1R7",
+    "rent": 1950.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 642,
+    "distance_to_POI": {
+      "campus": null,
+      "grocery": null,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "25 Eccleston Drive, Toronto, ON",
+    "rent": 1950.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 674,
+    "distance_to_POI": {
+      "campus": 11.82,
+      "grocery": 7.45,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 2615.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 688,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 3193.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 2,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 900,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 2850.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 795,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 3220.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 2,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 887,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "20 John St, Toronto, ON",
+    "rent": 3500.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": true,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": null,
+    "distance_to_POI": {
+      "campus": 2.45,
+      "grocery": 0.27,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "20 John St, Toronto, ON",
+    "rent": 3800.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": true,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": null,
+    "distance_to_POI": {
+      "campus": 2.45,
+      "grocery": 0.27,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "515 Rosewell Avenue, Toronto, ON",
+    "rent": 2495.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 777,
+    "distance_to_POI": {
+      "campus": 7.57,
+      "grocery": 5.85,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "1101 Bay Street, Toronto, ON",
+    "rent": 2495.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 535,
+    "distance_to_POI": { "campus": 1.0, "grocery": 0.11, "bus_stop": "pending" }
+  },
+  {
+    "address": "515 Rosewell Avenue, Toronto, ON",
+    "rent": 3295.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 841,
+    "distance_to_POI": {
+      "campus": 7.57,
+      "grocery": 5.85,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "455 Front Street East, Toronto, ON",
+    "rent": 2400.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 564,
+    "distance_to_POI": { "campus": 4.6, "grocery": 0.84, "bus_stop": "pending" }
+  },
+  {
+    "address": "10 Muirhead Road, North York, ON",
+    "rent": 2495.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 900,
+    "distance_to_POI": {
+      "campus": 11.79,
+      "grocery": 7.72,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "619 Woodbine Avenue, Toronto, Ontario",
+    "rent": 2179.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 592,
+    "distance_to_POI": {
+      "campus": 8.14,
+      "grocery": 1.15,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "99 Gerrard Street West, Toronto, ON",
+    "rent": 2680.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 570,
+    "distance_to_POI": {
+      "campus": 1.42,
+      "grocery": 0.32,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2 St. Thomas Street, Toronto, ON",
+    "rent": 5020.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 2,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 915,
+    "distance_to_POI": {
+      "campus": 0.91,
+      "grocery": 0.26,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "99 Tyndall Avenue, Toronto, ON",
+    "rent": 2150.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 539,
+    "distance_to_POI": { "campus": 5.31, "grocery": 1.0, "bus_stop": "pending" }
+  },
+  {
+    "address": "115 Tyndall Avenue, Toronto, ON",
+    "rent": 1579.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 429,
+    "distance_to_POI": {
+      "campus": 5.15,
+      "grocery": 0.99,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "25 Eccleston Drive, Toronto, ON",
+    "rent": 2850.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 914,
+    "distance_to_POI": {
+      "campus": 11.82,
+      "grocery": 7.45,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "4 Overland Drive, Toronto, ON, M3C 2C4",
+    "rent": 2125.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 629,
+    "distance_to_POI": {
+      "campus": 11.79,
+      "grocery": 7.73,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "130 River St, Toronto, ON",
+    "rent": null,
+    "num_bedrooms": 3,
+    "num_bathrooms": 2,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 1999,
+    "distance_to_POI": {
+      "campus": 3.86,
+      "grocery": 0.65,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2050 Keele Street, North York, ON",
+    "rent": 3096.0,
+    "num_bedrooms": 3,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 918,
+    "distance_to_POI": {
+      "campus": 9.33,
+      "grocery": 4.39,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "798 Richmond Street West, Toronto, ON",
+    "rent": 1750.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 236,
+    "distance_to_POI": {
+      "campus": 3.15,
+      "grocery": 0.73,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "25 Ordnance Street, Toronto, ON",
+    "rent": 2700.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 535,
+    "distance_to_POI": {
+      "campus": 4.02,
+      "grocery": 1.54,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "730 St Clarens Avenue, Toronto, ON",
+    "rent": 1475.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 230,
+    "distance_to_POI": {
+      "campus": 4.94,
+      "grocery": 2.07,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "3410 Havenwood Drive, Mississauga, ON",
+    "rent": 1900.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 500,
+    "distance_to_POI": {
+      "campus": 11.05,
+      "grocery": 5.29,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "921 Wilson Avenue, Toronto, ON",
+    "rent": 1850.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 600,
+    "distance_to_POI": {
+      "campus": 11.35,
+      "grocery": 8.8,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2 Vena Way, Toronto, ON",
+    "rent": 2100.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 545,
+    "distance_to_POI": {
+      "campus": null,
+      "grocery": null,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2900 Jane Street, Toronto, ON",
+    "rent": 1750.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 555,
+    "distance_to_POI": {
+      "campus": 14.13,
+      "grocery": 9.38,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "933 Wilson Avenue, Toronto, ON",
+    "rent": 2100.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 800,
+    "distance_to_POI": {
+      "campus": 11.55,
+      "grocery": 8.6,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "28 Bonny Lynn Ct, Scarborough, ON",
+    "rent": 1950.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 900,
+    "distance_to_POI": {
+      "campus": 13.36,
+      "grocery": 8.18,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "402 The East Mall, Etobicoke, ON",
+    "rent": 2400.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 600,
+    "distance_to_POI": { "campus": 9.5, "grocery": 2.82, "bus_stop": "pending" }
+  },
+  {
+    "address": "1001 O'Connor Drive, Toronto, ON",
+    "rent": 2700.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 688,
+    "distance_to_POI": {
+      "campus": 10.04,
+      "grocery": 4.85,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "6 Airdrie Road, East York, ON",
+    "rent": 2650.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": null,
+    "distance_to_POI": {
+      "campus": 6.36,
+      "grocery": 4.16,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "155 Balliol Street, Toronto, ON",
+    "rent": 2195.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 504,
+    "distance_to_POI": {
+      "campus": 4.86,
+      "grocery": 3.14,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2575 Danforth Avenue, Toronto, ON",
+    "rent": 2350.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": null,
+    "distance_to_POI": {
+      "campus": 8.71,
+      "grocery": 2.78,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 2500.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 598,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 2615.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 688,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 3193.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 2,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 900,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 2850.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 795,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "50 Portland St, Toronto, ON",
+    "rent": 3220.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 2,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 887,
+    "distance_to_POI": {
+      "campus": 2.93,
+      "grocery": 0.51,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "20 John St, Toronto, ON",
+    "rent": 3500.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": true,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": null,
+    "distance_to_POI": {
+      "campus": 2.45,
+      "grocery": 0.27,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "20 John St, Toronto, ON",
+    "rent": 3800.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": true,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": null,
+    "distance_to_POI": {
+      "campus": 2.45,
+      "grocery": 0.27,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "515 Rosewell Avenue, Toronto, ON",
+    "rent": 2495.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 777,
+    "distance_to_POI": {
+      "campus": 7.57,
+      "grocery": 5.85,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "1101 Bay Street, Toronto, ON",
+    "rent": 2495.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 535,
+    "distance_to_POI": { "campus": 1.0, "grocery": 0.11, "bus_stop": "pending" }
+  },
+  {
+    "address": "515 Rosewell Avenue, Toronto, ON",
+    "rent": 3295.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 841,
+    "distance_to_POI": {
+      "campus": 7.57,
+      "grocery": 5.85,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "455 Front Street East, Toronto, ON",
+    "rent": 2400.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 564,
+    "distance_to_POI": { "campus": 4.6, "grocery": 0.84, "bus_stop": "pending" }
+  },
+  {
+    "address": "10 Muirhead Road, North York, ON",
+    "rent": 2495.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 900,
+    "distance_to_POI": {
+      "campus": 11.79,
+      "grocery": 7.72,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "619 Woodbine Avenue, Toronto, ON",
+    "rent": 2179.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 592,
+    "distance_to_POI": {
+      "campus": 8.14,
+      "grocery": 1.15,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "99 Gerrard Street West, Toronto, ON",
+    "rent": 2680.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 570,
+    "distance_to_POI": {
+      "campus": 1.42,
+      "grocery": 0.32,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "99 Tyndall Avenue, Toronto, ON, M6K 2G2",
+    "rent": 2150.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 539,
+    "distance_to_POI": {
+      "campus": null,
+      "grocery": null,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "115 Tyndall Avenue, Toronto, ON",
+    "rent": 1579.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 429,
+    "distance_to_POI": {
+      "campus": 5.15,
+      "grocery": 0.99,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "25 Eccleston Drive, Toronto, ON",
+    "rent": 2850.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 914,
+    "distance_to_POI": {
+      "campus": 11.82,
+      "grocery": 7.45,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "4 Overland Drive, Toronto, ON",
+    "rent": 2125.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 629,
+    "distance_to_POI": {
+      "campus": 11.79,
+      "grocery": 7.73,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "130 River St, Toronto, ON",
+    "rent": null,
+    "num_bedrooms": 3,
+    "num_bathrooms": 2,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 1999,
+    "distance_to_POI": {
+      "campus": 3.86,
+      "grocery": 0.65,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2050 Keele Street, North York, ON",
+    "rent": 3096.0,
+    "num_bedrooms": 3,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 918,
+    "distance_to_POI": {
+      "campus": 9.33,
+      "grocery": 4.39,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "798 Richmond Street West, Toronto, ON",
+    "rent": 1750.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 236,
+    "distance_to_POI": {
+      "campus": 3.15,
+      "grocery": 0.73,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "730 St Clarens Avenue, Toronto, ON",
+    "rent": 1475.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 230,
+    "distance_to_POI": {
+      "campus": 4.94,
+      "grocery": 2.07,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "3410 Havenwood Drive, Mississauga, ON",
+    "rent": 1900.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 500,
+    "distance_to_POI": {
+      "campus": 11.05,
+      "grocery": 5.29,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2 Abbott Avenue, Toronto, ON",
+    "rent": 1800.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": true,
+    "gym": false,
+    "parking": false,
+    "female_only": false,
+    "area": 650,
+    "distance_to_POI": {
+      "campus": 5.48,
+      "grocery": 1.41,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "921 Wilson Avenue, Toronto, ON",
+    "rent": 1850.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 600,
+    "distance_to_POI": {
+      "campus": 11.35,
+      "grocery": 8.8,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2 Vena Way, Toronto, ON",
+    "rent": 2100.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 545,
+    "distance_to_POI": {
+      "campus": null,
+      "grocery": null,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "2900 Jane Street, Toronto, Ontario",
+    "rent": 1750.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 555,
+    "distance_to_POI": {
+      "campus": 14.13,
+      "grocery": 9.38,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "933 Wilson Avenue, Toronto, ON",
+    "rent": 2100.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": true,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 800,
+    "distance_to_POI": {
+      "campus": 11.55,
+      "grocery": 8.6,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "28 Bonny Lynn Ct, Scarborough, ON",
+    "rent": 1950.0,
+    "num_bedrooms": 2,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": false,
+    "gym": false,
+    "parking": true,
+    "female_only": false,
+    "area": 900,
+    "distance_to_POI": {
+      "campus": 13.36,
+      "grocery": 8.18,
+      "bus_stop": "pending"
+    }
+  },
+  {
+    "address": "402 The East Mall, Etobicoke, ON",
+    "rent": 2400.0,
+    "num_bedrooms": 1,
+    "num_bathrooms": 1,
+    "furnished": false,
+    "utilities_included": false,
+    "in_unit_laundry": true,
+    "gym": true,
+    "parking": true,
+    "female_only": false,
+    "area": 600,
+    "distance_to_POI": { "campus": 9.5, "grocery": 2.82, "bus_stop": "pending" }
+  }
+]
