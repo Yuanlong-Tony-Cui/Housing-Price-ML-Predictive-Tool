@@ -6,7 +6,7 @@ The purpose of this machine learning tool is to provide students with reliable i
 
 This project was designed and built by [Y. Cui](https://www.linkedin.com/in/yuanlong-tony-cui/), [T. Bai](https://www.linkedin.com/in/uwjackie/), [M. Lumibao](https://www.linkedin.com/in/michaellumibao/), and [L. Doria](https://www.linkedin.com/in/lukedoria/) collectively as part of the MSCI446 course in Winter 2023. The team members appreciate the guidance and advise provided by [Prof. Golab](https://uwaterloo.ca/management-sciences/profile/lgolab) and the TAs throughout the development of this project.
 
-To gain an overview of how this project works, please take a look at the Jupyter Notebook file at `Deliverables/MSCI446.ipynb`.
+To gain an overview of how this project works, please take a look at the Jupyter Notebook file at `Project Report.ipynb`.
 
 ## Sub-Modules
 
